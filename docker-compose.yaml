@@ -11,7 +11,7 @@ services:
     tty: true
     stdin_open: true
 
-  # sqlserver:
+  sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       ACCEPT_EULA: "Y"
@@ -47,7 +47,6 @@ services:
       VONK_Audit__EnableAuditEventLogging: False
       VONK_Audit__EnableAuditFileLogging: False
       VONK_Audit__AuditEventSignatureEnabled: False
-      VONK_Repository: SQL
       VONK_SqlDbOptions__ConnectionString: "Server=sqlserver; Initial Catalog=VonkData; User Id=sa; Password=${SQLDB_PASSWORD}; Encrypt=false"
 
     ports:
