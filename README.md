@@ -7,3 +7,9 @@ In order to start the docker-compose, you need first to create a file `.env` wit
 SQLDB_PASSWORD="SomeStringPassword"
 
 ```
+
+Once this is done, you can start using:
+
+```SH
+sudo docker compose up
+```
