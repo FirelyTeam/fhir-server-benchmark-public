@@ -37,11 +37,9 @@ services:
           memory: 8G
           cpus: '8'
     environment:
-      # VONK_Repository: SQL
-      # VONK_SqlDbOptions__ConnectionString: "Server=sqlserver; Initial Catalog=VonkData; User Id=sa; Password=${SQLDB_PASSWORD}; Encrypt=false"
       VONK_Repository: MongoDb
-      VONK_MongoDbOptions__ConnectionString=mongodb+srv://vonk:${MONGODB_PASSWORD}g@vonk-bfdb-test-new.gapqn.mongodb.net/perf-test-cluster
-      VONK_MongoDbOptions__EntryCollection=vonkentries
+      VONK_MongoDbOptions__ConnectionString: mongodb+srv://vonk:${MONGODB_PASSWORD}g@vonk-bfdb-test-new.gapqn.mongodb.net/perf-test-cluster
+      VONK_MongoDbOptions__EntryCollection: vonkentries
       VONK_BundleOptions__DefaultTotal: accurate
       VONK_Validation__Parsing: Permissive
       VONK_Validation__Level: Core
@@ -49,6 +47,8 @@ services:
       # VONK_Audit__EnableAuditEventLogging: False
       # VONK_Audit__EnableAuditFileLogging: False
       # VONK_Audit__AuditEventSignatureEnabled: False
+      # VONK_Repository: SQL
+      # VONK_SqlDbOptions__ConnectionString: "Server=sqlserver; Initial Catalog=VonkData; User Id=sa; Password=${SQLDB_PASSWORD}; Encrypt=false"
 
     ports:
       - "8080:4080"
