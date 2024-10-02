@@ -27,7 +27,7 @@ services:
   #     timeout: 10s
 
   firelyserver:
-    image: firely/server:5.9.1
+    image: firely/server:5.9.0
     # depends_on:
     #   sqlserver:
     #     condition: service_healthy
