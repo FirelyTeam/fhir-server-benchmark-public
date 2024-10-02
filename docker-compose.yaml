@@ -60,4 +60,3 @@ services:
 
 networks:
   fs-benchmark-network:
-    external: true
