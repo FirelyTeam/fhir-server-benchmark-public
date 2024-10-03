@@ -38,7 +38,7 @@ services:
           cpus: '8'
     environment:
       VONK_Repository: MongoDb
-      VONK_MongoDbOptions__ConnectionString: mongodb+srv://vonk:${MONGODB_PASSWORD}@fs-bfdb.gapqn.mongodb.net/?retryWrites=true&w=majority&appName=fs-bfdb
+      VONK_MongoDbOptions__ConnectionString: mongodb+srv://vonk:${MONGODB_PASSWORD}@fs-bfdb.gapqn.mongodb.net/perf-test-cluster?retryWrites=true&w=majority&appName=fs-bfdb
       VONK_MongoDbOptions__EntryCollection: vonkentries
       VONK_BundleOptions__DefaultTotal: accurate
       VONK_Validation__Parsing: Permissive
